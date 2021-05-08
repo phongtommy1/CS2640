@@ -6,14 +6,18 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import java.util.Collections;
+import java.util.List;
 
 import static com.example.cs2640project.MainActivity.*;
 
 public class MainActivity2 extends AppCompatActivity {
     public int UserInput;
+    public final String TAG = "mainactivity2";
     AppCompatButton btn;
     AppCompatButton btn1;
     AppCompatButton btn2;
@@ -34,6 +38,14 @@ public class MainActivity2 extends AppCompatActivity {
     AppCompatButton btn17;
     AppCompatButton btn18;
     AppCompatButton btn19;
+    AppCompatButton btnGame;
+    AppCompatButton btnTry;
+    AppCompatButton btnEnd;
+
+
+    private int clicked = 0;
+    private boolean turnOver = false;
+    private int previous = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,44 +72,134 @@ public class MainActivity2 extends AppCompatActivity {
         btn17 = findViewById(R.id.btn17);
         btn18 = findViewById(R.id.btn18);
         btn19 = findViewById(R.id.btn19);
+        btnEnd = findViewById(R.id.btnEnd);
+        btnGame = findViewById(R.id.btnGame);
+        btnTry = findViewById(R.id.btnTry);
 
         UserInput = getIntent().getIntExtra(USER_INPUT, 0);
         Log.i("MainActivity2", "The enter value is:" + UserInput);
 
         AppCompatButton[] buttonArray = { btn, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18, btn19};
-        String[] words = {"poop", "baka", "onnichan", "pineapple", "anime", "pikachu", "bunny", "senpai", "sensei", "goku"};
-        String[] wordChosen = new String[UserInput];
+        List<Integer> words = (Arrays.asList(R.drawable.goku_1, R.drawable.poo, R.drawable.anime, R.drawable.bunny, R.drawable.mask, R.drawable.music, R.drawable.pineapple, R.drawable.pizza, R.drawable.pokemon, R.drawable.snake));
+        List<Integer> wordChosen = new ArrayList<>();
 
-        for (int i = 0; i < UserInput; i++) {
-            wordChosen[i] = words[i];
+        // randomize the picture that is going to be drawn
+        Collections.shuffle(words);
+
+        for (int i = 0; i < UserInput ; i++) {
             buttonArray[i].setVisibility(View.VISIBLE);
-
         }
 
-        String[] a = duplicateWord(wordChosen);
-        Collections.shuffle(Arrays.asList(a));
-
-        for(int j = 0; j < UserInput; j++ ){
-
+        // loop to load picture
+        for (int x = 0; x < UserInput /2; x++){
+            wordChosen.add(words.get(x));
         }
+
+        List<Integer> a = duplicateWord(wordChosen);
+        Collections.shuffle(a);
+
+        runGame(buttonArray, a);
+
+
+        btnEnd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for (int z = 0; z < UserInput; z++) {
+                    buttonArray[z].setBackgroundResource(a.get(z));
+                }
+            }
+        });
+
+        btnGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // randomize the picture that is going to be drawn
+                List<Integer> wordChosen2 = new ArrayList<>();
+                Collections.shuffle(words);
+                for (int x = 0; x < UserInput /2; x++){
+                    wordChosen2.add(words.get(x));
+                }
+
+                List<Integer> c = duplicateWord(wordChosen2);
+                Collections.shuffle(c);
+
+                for(int b = 0; b < UserInput; b++){
+                    buttonArray[b].setBackgroundResource(R.drawable.cardblack);
+                    buttonArray[b].setEnabled(true);
+                }
+                clicked = 0;
+                turnOver = false;
+                previous = -1;
+                runGame(buttonArray, c);
+            }
+        });
 
 
     }
 
-    private String[] duplicateWord(String[] a) {
-        String[] b = a;
-        int length = a.length * 2;
-        String result[] = new String[length];
-        int pos = 0;
+    private void runGame(AppCompatButton[] buttonArray, List<Integer> a ) {
+        for(int j = 0; j< UserInput; j++ ){
+            buttonArray[j].setText("back");
+            buttonArray[j].setTextSize(0.0F);
+            final int increment = j;
+            buttonArray[j].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(buttonArray[increment].getText() == ("back") && !turnOver){
+                        buttonArray[increment].setBackgroundResource(a.get(increment));
+                        buttonArray[increment].setText(a.get(increment));
+                        if(clicked == 0){
+                            previous = increment;
+                        }
+                        clicked++;
+                    }
+                    else if(buttonArray[increment].getText() != "back"){
+                        buttonArray[increment].setBackgroundResource(R.drawable.cardblack);
+                        buttonArray[increment].setText("back");
+                        clicked--;
+                        Log.i(TAG, "Clicked is " + clicked);
+                    }
+                    if(clicked == 2) {
+                        turnOver = true;
+                        if (buttonArray[increment].getText() == buttonArray[previous].getText()) {
+                            buttonArray[increment].setEnabled(false);
+                            buttonArray[previous].setEnabled(false);
+                            turnOver = false;
+                            clicked = 0;
+                        }
+                        else {
+                            btnTry.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    buttonArray[increment].setBackgroundResource(R.drawable.cardblack);
+                                    buttonArray[increment].setText("back");
+                                    buttonArray[previous].setBackgroundResource(R.drawable.cardblack);
+                                    buttonArray[previous].setText("back");
+                                    clicked = 0;
+                                    turnOver = false;
+                                }
+                            });
 
-       for(String element : a){
-           result[pos] = element;
-           pos++;
+                            Log.i(TAG, "Clicked is " + clicked);
+                        }
+                    }
+
+
+                }
+            });
+        }
+    }
+
+    private List<Integer> duplicateWord(List<Integer> a) {
+        List<Integer> b = a;
+        List<Integer> result = new ArrayList<>();
+
+       for(int element : a){
+           result.add(element);
        }
 
-       for(String element : b){
-           result[pos] = element;
-           pos++;
+       for(int element : b){
+          result.add(element);
        }
 
        return result;
