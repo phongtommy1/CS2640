@@ -18,7 +18,7 @@ import java.util.List;
 import static android.widget.Toast.LENGTH_SHORT;
 import static com.example.cs2640project.MainActivity.*;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements Custom_Dialog.Custom_DialogInterface {
     public int UserInput;
     public int gameOver = 0;
     public int score = 0;
@@ -47,6 +47,7 @@ public class MainActivity2 extends AppCompatActivity {
     AppCompatButton btnTry;
     AppCompatButton btnEnd;
     TextView tvScore;
+    TextView tvExample;
 
     private int clicked = 0;
     private boolean turnOver = false;
@@ -81,6 +82,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnEnd = findViewById(R.id.btnEnd);
         btnGame = findViewById(R.id.btnGame);
         btnTry = findViewById(R.id.btnTry);
+        tvExample = findViewById(R.id.tvExample);
 
         UserInput = getIntent().getIntExtra(USER_INPUT, 0);
         Log.i("MainActivity2", "The enter value is:" + UserInput);
@@ -137,6 +139,9 @@ public class MainActivity2 extends AppCompatActivity {
                 clicked = 0;
                 turnOver = false;
                 previous = -1;
+                gameOver = 0;
+                score = 0;
+                tvScore.setText("Score: " + score);
                 runGame(buttonArray, c);
             }
         });
@@ -198,16 +203,12 @@ public class MainActivity2 extends AppCompatActivity {
                             Log.i(TAG, "Clicked is " + clicked);
                         }
                     }
+                    if (gameOver == UserInput / 2){
+                        openDialog();
+                    }
                 }
             });
-
-
         }
-
-        if(gameOver == UserInput / 2){
-            Toast.makeText(this, "Game Over", LENGTH_SHORT).show();
-        }
-
     }
 
     private List<Integer> duplicateWord(List<Integer> a) {
@@ -223,5 +224,15 @@ public class MainActivity2 extends AppCompatActivity {
        }
 
        return result;
+    }
+
+    public void openDialog(){
+        Custom_Dialog custom_dialog = new Custom_Dialog();
+        custom_dialog.show(getSupportFragmentManager(), "Testing");
+    }
+
+    @Override
+    public void applyText(String textOne) {
+        tvExample.setText(textOne);
     }
 }
