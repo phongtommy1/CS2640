@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+
 public class MainActivity extends AppCompatActivity {
     //VARIABLES FOR HANDLING GAME AUDIO
     static MediaPlayer gameAudio;  //for game audio using MediaPlayer (make static so that there is only one single instance of game audio)
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     static Intent closingService;  //the Intent to be used for closing the app by swiping up (make static so there is only one instance of it that can be used)
 
     Button btnStart;
+    Button btnHS;
     EditText etAmount;
     String numOfTitles;
     public static final String USER_INPUT = "user_input";
@@ -96,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         btnStart = findViewById(R.id.btnStart);
+        btnHS = findViewById(R.id.btnHS);
         etAmount = findViewById(R.id.etAmount);
 
         btnStart.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +109,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
                 // figure out how to pass user's input to next class
                 i.putExtra(USER_INPUT, resultOfInput);
+                startActivity(i);
+            }
+        });
+
+        btnHS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, HighScorePage.class);
                 startActivity(i);
             }
         });

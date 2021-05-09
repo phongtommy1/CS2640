@@ -4,20 +4,95 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/Theme.CS2640Project">
-        <activity android:name=".MainActivity2"
-            android:parentActivityName=".MainActivity"
-            >
+        <activity android:name=".HighScore20"
+            android:parentActivityName=".HighScorePage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
+                android:value=".HighScorePage"
                 />
+        </activity>
+        <activity android:name=".HighScore18"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity android:name=".HighScore16"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore14"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore12"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore10"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore8"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore6"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScore4"
+            android:parentActivityName=".HighScorePage">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighScorePage"
+                />
+        </activity>
+        <activity
+            android:name=".HighScorePage"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -6,6 +6,8 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,10 +15,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static android.widget.Toast.LENGTH_SHORT;
 import static com.example.cs2640project.MainActivity.*;
 
 public class MainActivity2 extends AppCompatActivity {
     public int UserInput;
+    public int gameOver = 0;
+    public int score = 0;
     public final String TAG = "mainactivity2";
     AppCompatButton btn;
     AppCompatButton btn1;
@@ -41,7 +46,7 @@ public class MainActivity2 extends AppCompatActivity {
     AppCompatButton btnGame;
     AppCompatButton btnTry;
     AppCompatButton btnEnd;
-
+    TextView tvScore;
 
     private int clicked = 0;
     private boolean turnOver = false;
@@ -52,6 +57,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        tvScore = findViewById(R.id.tvScore);
         btn = findViewById(R.id.btn);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
@@ -113,6 +119,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                score = 0;
                 // randomize the picture that is going to be drawn
                 List<Integer> wordChosen2 = new ArrayList<>();
                 Collections.shuffle(words);
@@ -164,6 +171,10 @@ public class MainActivity2 extends AppCompatActivity {
                         if (buttonArray[increment].getText() == buttonArray[previous].getText()) {
                             buttonArray[increment].setEnabled(false);
                             buttonArray[previous].setEnabled(false);
+                            score += 2;
+                            gameOver++;
+                            Log.i("hello", String.valueOf(gameOver));
+                            tvScore.setText("Score: " + score);
                             turnOver = false;
                             clicked = 0;
                         }
@@ -177,17 +188,26 @@ public class MainActivity2 extends AppCompatActivity {
                                     buttonArray[previous].setText("back");
                                     clicked = 0;
                                     turnOver = false;
+                                    if(score > 0){
+                                        score -= 1;
+                                        tvScore.setText("Score: " + score);
+                                    }
                                 }
                             });
 
                             Log.i(TAG, "Clicked is " + clicked);
                         }
                     }
-
-
                 }
             });
+
+
         }
+
+        if(gameOver == UserInput / 2){
+            Toast.makeText(this, "Game Over", LENGTH_SHORT).show();
+        }
+
     }
 
     private List<Integer> duplicateWord(List<Integer> a) {
