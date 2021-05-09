@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EndScreen4">
+
+    <TextView
+        android:id="@+id/gameOverLabel"
+        android:layout_width="294dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        android:text="GAME OVER"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="171dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="188dp"
+        android:text="SCORE"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highScore1Label"
+        android:layout_width="165dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="384dp"
+        android:text="HIGH SCORE 1"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highScore2Label"
+        android:layout_width="165dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="444dp"
+        android:text="HIGH SCORE 2"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highScore3Label"
+        android:layout_width="165dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="508dp"
+        android:text="HIGH SCORE 3"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/highLabel"
+        android:layout_width="173dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="324dp"
+        android:text="High Scores"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exitToMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="620dp"
+        android:text="Back to Main Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,10 +32,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn1"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn"
@@ -43,20 +43,20 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn2"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn3"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn2"
@@ -64,10 +64,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn4"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn1"
@@ -75,10 +75,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn5"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn3"
@@ -86,10 +86,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn6"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn4"
@@ -97,10 +97,10 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn7"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn5"
@@ -108,40 +108,40 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn8"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn9"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn8"
         app:layout_constraintTop_toBottomOf="@+id/btn3" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn10"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn8" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn11"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/btn10"
         app:layout_constraintTop_toBottomOf="@+id/btn9" />
@@ -149,73 +149,73 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn12"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn9"
         app:layout_constraintTop_toBottomOf="@+id/btn5" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn13"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn11"
         app:layout_constraintTop_toBottomOf="@+id/btn12" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn14"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn12"
         app:layout_constraintTop_toBottomOf="@+id/btn7" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn15"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn13"
         app:layout_constraintTop_toBottomOf="@+id/btn14" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn16"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn10" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn17"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn16"
         app:layout_constraintTop_toBottomOf="@+id/btn11" />]
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn18"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn17"
         app:layout_constraintTop_toBottomOf="@+id/btn13" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn19"
-        android:visibility="invisible"
         android:layout_width="97dp"
         android:layout_height="100dp"
         android:background="@drawable/cardblack"
+        android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@id/btn18"
         app:layout_constraintTop_toBottomOf="@+id/btn15" />
 
@@ -247,12 +247,114 @@
         android:id="@+id/btnTry"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="640dp"
         android:text="Try Again"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@id/btnEnd"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="84dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="624dp"
+        android:text="Back to Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fourCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="4CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sixCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="6CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/eightCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="8CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tenCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="10CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/twelveCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="12CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/fourteenCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="14CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sixteenCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="16CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/eighteenCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="18CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/twentyCardScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="72dp"
+        android:text="20CardScore"
+        app:layout_constraintBottom_toTopOf="@+id/btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

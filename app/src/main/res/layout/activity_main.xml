@@ -41,14 +41,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tvGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/etAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter an even number"
+        android:hint="Enter an Even Number (4-20)"
         app:layout_constraintBottom_toTopOf="@+id/btnStart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
