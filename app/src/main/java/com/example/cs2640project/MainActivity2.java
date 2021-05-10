@@ -281,38 +281,56 @@ public class MainActivity2 extends AppCompatActivity {
 
         if(UserInput == 4)
         {
+            score4 = 0;
+            score4CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score4CardsLabel);
         }
         else if(UserInput == 6)
         {
+            score6 = 0;
+            score6CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score6CardsLabel);
         }
         else if(UserInput == 8)
         {
+            score8 = 0;
+            score8CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score8CardsLabel);
         }
         else if(UserInput == 10)
         {
+            score10 = 0;
+            score10CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score10CardsLabel);
         }
         else if(UserInput == 12)
         {
+            score12 = 0;
+            score12CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score12CardsLabel);
         }
         else if(UserInput == 14)
         {
+            score14 = 0;
+            score14CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score14CardsLabel);
         }
         else if(UserInput == 16)
         {
+            score16 = 0;
+            score16CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score16CardsLabel);
         }
         else if(UserInput == 18)
         {
+            score18 = 0;
+            score18CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score18CardsLabel);
         }
         else if(UserInput == 20)
         {
+            score20 = 0;
+            score20CardsLabel.setText("Score: " + 0);
             runGame(buttonArray, a, score20CardsLabel);
         }
 
