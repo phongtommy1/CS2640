@@ -22,76 +22,16 @@
         android:id="@+id/scoreLabel"
         android:layout_width="171dp"
         android:layout_height="53dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="336dp"
         android:text="SCORE"
         android:textAlignment="center"
         android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/highScore1Label"
-        android:layout_width="165dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="384dp"
-        android:text="HIGH SCORE 1"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/highScore2Label"
-        android:layout_width="165dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="444dp"
-        android:text="HIGH SCORE 2"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/highScore3Label"
-        android:layout_width="165dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="508dp"
-        android:text="HIGH SCORE 3"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/highLabel"
-        android:layout_width="173dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="324dp"
-        android:text="High Scores"
-        android:textAlignment="center"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/highScoreLabel"
-        android:layout_width="174dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="384dp"
-        android:text="HIGH SCORE"
-        android:textAlignment="center"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/exitToMenuButton"
+        android:id="@+id/backToMenuButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"

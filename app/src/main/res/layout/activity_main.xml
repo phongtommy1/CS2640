@@ -11,7 +11,7 @@
         android:id="@+id/tvGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="cursive"
         android:text="Matching Game"
         android:textAllCaps="false"
@@ -23,15 +23,15 @@
 
     <Button
         android:id="@+id/btnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="340dp"
+        android:layout_width="172dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="40dp"
         android:text="Press to play"
         app:backgroundTint="#0E0C0C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/etAmount" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -46,19 +46,31 @@
         android:id="@+id/etAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
         android:hint="Enter an Even Number (4-20)"
-        app:layout_constraintBottom_toTopOf="@+id/btnStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="120dp"
         android:checked="false"
         android:textOff="Toggle Music ON"
         android:textOn="Toggle Music OFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/highScoresPageButton"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="32dp"
+        android:text="High Scores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStart" />
 </androidx.constraintlayout.widget.ConstraintLayout>

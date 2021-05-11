@@ -279,6 +279,7 @@ public class MainActivity2 extends AppCompatActivity {
         List<Integer> a = duplicateWord(wordChosen);
         Collections.shuffle(a);
 
+        //reset the score to 0 and run the game
         if(UserInput == 4)
         {
             score4 = 0;
@@ -349,19 +350,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*
-                //reset scores upon new game
-                score4 = 0;
-                score6 = 0;
-                score8 = 0;
-                score10 = 0;
-                score12 = 0;
-                score14 = 0;
-                score16 = 0;
-                score18 = 0;
-                score20 = 0;
-                */
-
                 // randomize the picture that is going to be drawn
                 List<Integer> wordChosen2 = new ArrayList<>();
                 Collections.shuffle(words);
@@ -380,11 +368,7 @@ public class MainActivity2 extends AppCompatActivity {
                 turnOver = false;
                 previous = -1;
 
-                //FIX THIS
-                //run the game with the scorelabel and score as parameters as well (copypaste code)
-                //runGame(buttonArray, c);
-
-
+                //reset scores upon new game
                 if(UserInput == 4)
                 {
                     score4 = 0;
@@ -803,8 +787,6 @@ public class MainActivity2 extends AppCompatActivity {
                 }
             });
         }
-
-        //end game might go here
     }
 
     private List<Integer> duplicateWord(List<Integer> a) {

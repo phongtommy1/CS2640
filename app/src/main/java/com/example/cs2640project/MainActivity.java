@@ -22,11 +22,12 @@ public class MainActivity extends AppCompatActivity {
     static ToggleButton audioButton;  //create the toggle button called audioButton (make static so there is only one instance of it that can be used)
     static Intent closingService;  //the Intent to be used for closing the app by swiping up (make static so there is only one instance of it that can be used)
 
+    Button highScoresPageButton;
     Button btnStart;
     EditText etAmount;
     String numOfTitles;
     public static final String USER_INPUT = "user_input";
-    int resultOfInput;
+    public static int resultOfInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +98,19 @@ public class MainActivity extends AppCompatActivity {
 
         btnStart = findViewById(R.id.btnStart);
         etAmount = findViewById(R.id.etAmount);
+        highScoresPageButton = findViewById(R.id.highScoresPageButton);
+
+        highScoresPageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numOfTitles = etAmount.getText().toString();
+                resultOfInput = Integer.parseInt(numOfTitles);
+                Intent i = new Intent(MainActivity.this, HighScoresPage.class);
+                // figure out how to pass user's input to next class
+                i.putExtra(USER_INPUT, resultOfInput);
+                startActivity(i);
+            }
+        });
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,11 +142,15 @@ public class MainActivity extends AppCompatActivity {
                 if(numEnter % 2 == 1 || numEnter > 20 || numEnter < 4) {
                     btnStart.setEnabled(false);
                     btnStart.setTextColor(Color.RED);
+                    highScoresPageButton.setEnabled(false);
+                    highScoresPageButton.setTextColor(Color.RED);
                     Toast.makeText(MainActivity.this, "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     btnStart.setEnabled(true);
                     btnStart.setTextColor(Color.WHITE);
+                    highScoresPageButton.setEnabled(true);
+                    highScoresPageButton.setTextColor(Color.WHITE);
                 }
             }
 
