@@ -78,6 +78,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/highScoreLabel"
+        android:layout_width="174dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="384dp"
+        android:text="HIGH SCORE"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/exitToMenuButton"
         android:layout_width="wrap_content"
