@@ -803,4 +803,50 @@ public class MainActivity2 extends AppCompatActivity {
 
        return result;
     }
+
+    //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //THIS IS THE ORIENTATION HANDLING
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        System.out.println("onSaveInstance");
+        outState.putBoolean("button", btn.isPressed());
+        outState.putInt("user input", UserInput);
+        outState.putInt("clicked",clicked);
+        outState.putBoolean("turn over", turnOver);
+        outState.putInt("previous", previous);
+        outState.putInt("score4", score4);
+        outState.putInt("score6", score6);
+        outState.putInt("score8", score8);
+        outState.putInt("score10", score10);
+        outState.putInt("score12", score12);
+        outState.putInt("score14", score14);
+        outState.putInt("score16", score16);
+        outState.putInt("score18", score18);
+        outState.putInt("score20", score20);
+
+    }
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+        System.out.println("onRestoreState");
+        savedInstanceState.getBoolean("button");
+        savedInstanceState.getInt("score value");
+        savedInstanceState.getInt("user input");
+        savedInstanceState.getInt("clicked");
+        savedInstanceState.getInt("game over");
+        savedInstanceState.getInt("score");
+        savedInstanceState.getBoolean("turn over");
+        savedInstanceState.getInt("previous");
+        savedInstanceState.getInt("score4");
+        savedInstanceState.getInt("score6");
+        savedInstanceState.getInt("score8");
+        savedInstanceState.getInt("score10");
+        savedInstanceState.getInt("score12");
+        savedInstanceState.getInt("score14");
+        savedInstanceState.getInt("score16");
+        savedInstanceState.getInt("score18");
+        savedInstanceState.getInt("score20");
+
+    }
 }
